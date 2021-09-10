@@ -1,3 +1,4 @@
+
 body {
     font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
     color: #404040;
@@ -108,7 +109,7 @@ body {
  
   .button.red {
     background: #d02e17;
-    border-color: #942110 #902010 #741a0d;
+    border-color: #020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
     background-image: -moz-linear-gradient(top, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
@@ -145,7 +146,7 @@ body {
   
   .button.blue {
     background: #3471b8;
-    border-color: #255184 #244f80 #1e4068;
+    border-color: #020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #497fcc 0%, #3d72c8 50%, #3471b8 50%, #2365a0 100%);
     background-image: -moz-linear-gradient(top, #497fcc 0%, #3d72c8 50%, #3471b8 50%, #2365a0 100%);
@@ -182,7 +183,7 @@ body {
   
   .button.green {
     background: #3e952d;
-    border-color: #29621e #275e1c #1d4715;
+    border-color: #020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #45b436 0%, #3ca933 50%, #3e952d 50%, #337c1d 100%);
     background-image: -moz-linear-gradient(top, #45b436 0%, #3ca933 50%, #3e952d 50%, #337c1d 100%);
@@ -218,7 +219,7 @@ body {
   
   .button.cyan {
     background: #2eabb3;
-    border-color: #20797e #1f757a #195d62;
+    border-color: #020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #3dbdcd 0%, #33b2c7 50%, #2eabb3 50%, #1e9a99 100%);
     background-image: -moz-linear-gradient(top, #3dbdcd 0%, #33b2c7 50%, #2eabb3 50%, #1e9a99 100%);
@@ -254,7 +255,7 @@ body {
   
   .button.brown {
     background: #c8a22e;
-    border-color: #927622 #8e7321 #755f1b;
+    border-color: #020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #d5ba4a 0%, #d2ba3d 50%, #c8a22e 50%, #af821e 100%);
     background-image: -moz-linear-gradient(top, #d5ba4a 0%, #d2ba3d 50%, #c8a22e 50%, #af821e 100%);
@@ -290,7 +291,7 @@ body {
   
   .button.pink {
     background: #b62b89;
-    border-color: #801e61 #7c1d5e #63184b;
+    border-color: #020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #d03998 0%, #cb308c 50%, #b62b89 50%, #9c1c7b 100%);
     background-image: -moz-linear-gradient(top, #d03998 0%, #cb308c 50%, #b62b89 50%, #9c1c7b 100%);
@@ -326,7 +327,7 @@ body {
   
   .button.purple {
     background: #6440be;
-    border-color: #4a2f8c #482e89 #3c2672;
+    border-color: #020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #825ec9 0%, #7d53c5 50%, #6440be 50%, #482da8 100%);
     background-image: -moz-linear-gradient(top, #825ec9 0%, #7d53c5 50%, #6440be 50%, #482da8 100%);
@@ -362,7 +363,7 @@ body {
   
   .button.gray {
     background: #999999;
-    border-color: #787878 #757575 #666666;
+    border-color:#020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #adadad 0%, #a6a6a6 50%, #999999 50%, #8e7b7c 100%);
     background-image: -moz-linear-gradient(top, #adadad 0%, #a6a6a6 50%, #999999 50%, #8e7b7c 100%);
@@ -401,7 +402,7 @@ body {
   
   .button.yellow {
     background: #eedb2f;
-    border-color: #eedb2f;
+    border-color: #020200;
     font-family:georgia,garamond,serif;font-size:25px;font-style:italic;
     background-image: -webkit-linear-gradient(top, #eedb2f);
     background-image: -moz-linear-gradient(top, #eedb2f);

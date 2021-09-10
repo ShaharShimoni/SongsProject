@@ -77,10 +77,14 @@ navigator.mediaDevices.getUserMedia(audioIN)
 
 
 
-function changeState(index,state){
+function changeState(index,state,id){
   IndexArray[index]=state;
+  if(state==1){
+     document.getElementById(id).style.color ="black";
+  }
   if(state==0){
     audioArray[index].pause();
+    document.getElementById(id-1).style.color ="white";
   }
   console.log(IndexArray)
   console.log(list)
@@ -108,7 +112,6 @@ function playall(){
 }
 
 
-
 function save_history(){
     let newArray = IndexArray.slice();
     list.push(newArray);
@@ -117,8 +120,7 @@ function save_history(){
     var length=list.length;
     option.text = ""+length;
     x.add(option);
-    
-   
+      
 }
 
 function print_history(){
@@ -128,14 +130,16 @@ function print_history(){
 }
 
 // Play History Choises
-function myFunction() {
+function Play_History() {
   var x = document.getElementById("mySelectHistory").value;
   console.log(list)
-  //if(list.length>0){
   for(let i=0;i<list[x-1].length;i++){
     if(list[x-1][i]==1){
       audioArray[i].play();
       audioArray[i].loop=true;
+    }
+    else{  //stops songs from last record
+      audioArray[i].pause();
     }
   }
 } 
