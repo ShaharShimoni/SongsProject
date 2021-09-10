@@ -1,0 +1,15 @@
+{
+  "name": "moveo_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shahar Glikman",
+  "type": "commonjs",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.2.0"
+  }
+}
