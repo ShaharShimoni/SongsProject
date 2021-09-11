@@ -10,6 +10,7 @@
   "type": "commonjs",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "socket.io": "^4.2.0"
   }
 }
