@@ -18,22 +18,6 @@ var count=0;
 //************************* Record****************************
 
  let audioIN = { audio: true }; //  audio is true, for recording
-// //Access the permission for use the microphone
-// navigator.mediaDevices.enumerateDevices().then(function(devices) {
-//   devices.forEach(function(device) {
-//     console.log(device.kind)
-//      if (device.kind == "audiouput") {
-//     //   let item = document.createElement("option");
-//     //   item.innerText = device.label;
-//     //   item.value = device.deviceId;
-//     //   menu.appendChild(item);
-//      }
-//   });
-// });
-//check
-
-
-
 
 navigator.mediaDevices.getUserMedia(audioIN)
   .then(function (mediaStreamObj) {
