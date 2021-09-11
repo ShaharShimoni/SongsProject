@@ -12,13 +12,29 @@ var song9 = new Audio('./songs/SilentStar_120_Em_OrganSynth.mp3');
 
 var audioArray = [ song1, song2, song3, song4, song5, song6, song7, song8,song9];
 var IndexArray = [ 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0]; 
-var list=[];
+var list=[];  //saves user's actions
 var count=0;
 
+//************************* Record****************************
+
+ let audioIN = { audio: true }; //  audio is true, for recording
+// //Access the permission for use the microphone
+// navigator.mediaDevices.enumerateDevices().then(function(devices) {
+//   devices.forEach(function(device) {
+//     console.log(device.kind)
+//      if (device.kind == "audiouput") {
+//     //   let item = document.createElement("option");
+//     //   item.innerText = device.label;
+//     //   item.value = device.deviceId;
+//     //   menu.appendChild(item);
+//      }
+//   });
+// });
+//check
 
 
-let audioIN = { audio: true }; //  audio is true, for recording
-// Access the permission for use the microphone
+
+
 navigator.mediaDevices.getUserMedia(audioIN)
   .then(function (mediaStreamObj) {
 
@@ -31,11 +47,13 @@ navigator.mediaDevices.getUserMedia(audioIN)
     }
     let start = document.getElementById('record');
     let stop = document.getElementById('stopRecord');
-    let playAudio = document.getElementById('adioPlay');
+    let playAudio = document.getElementById('audioPlay');
+    
+  
     mediaRecorder = new MediaRecorder(mediaStreamObj);
+    
   
     start.addEventListener('click', function (ev) {
-        console.log('I was clicked')
         record.disabled = true;
         record.style.backgroundColor = "blue"
         stopRecord.disabled=false;
@@ -44,13 +62,12 @@ navigator.mediaDevices.getUserMedia(audioIN)
     })
 
     stop.addEventListener('click', function (ev) {
-      console.log("Stop")
       record.style.backgroundColor = "red";
       mediaRecorder.stop();
       
     });
-    // Chunk array to store the audio data 
-    let dataArray = [];
+    
+    let dataArray = []; // Chunk array to store the audio data 
     // If audio data available then push it to the chunk array
     mediaRecorder.ondataavailable = function (ev) {
       dataArray.push(ev.data);
@@ -76,8 +93,9 @@ navigator.mediaDevices.getUserMedia(audioIN)
   });
 
 
+//************************* Buttons ****************************
 
-function changeState(index,state,id){
+function changeState(index,state,id){  //states of buttons
   IndexArray[index]=state;
   if(state==1){
      document.getElementById(id).style.color ="black";
@@ -86,8 +104,8 @@ function changeState(index,state,id){
     audioArray[index].pause();
     document.getElementById(id-1).style.color ="white";
   }
-  console.log(IndexArray)
-  console.log(list)
+  // console.log(IndexArray)
+  // console.log(list)
 
 }
 
@@ -97,7 +115,7 @@ function pauseall(){
           audioArray[i].pause();
       }
     }
-    print_history();
+    // print_history();
 }
 
 function playall(){
@@ -111,23 +129,27 @@ function playall(){
 
 }
 
+//************************* User's actions ****************************
 
-function save_history(){
-    let newArray = IndexArray.slice();
-    list.push(newArray);
-    var x = document.getElementById("mySelectHistory");
-    var option = document.createElement("option");
-    var length=list.length;
-    option.text = ""+length;
-    x.add(option);
+function save_history(){  
+    let newArray = IndexArray.slice(); //deep copy
+    if(newArray.includes(1)){  
+       list.push(newArray);
+       var x = document.getElementById("mySelectHistory");
+       var option = document.createElement("option");
+       var length=list.length;
+       option.text = ""+length;
+       x.add(option);
+    }
       
 }
 
-function print_history(){
-  for(let j = 0; j < list.length; j++){
-    console.log("array number"+j+"="+list[j])
-  }
-}
+// function print_history(){  //test
+//   for(let j = 0; j < list.length; j++){
+//     console.log("array number"+j+"="+list[j])
+//   }
+// }
+
 
 // Play History Choises
 function Play_History() {

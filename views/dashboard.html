@@ -9,6 +9,7 @@
 <body>
  
   <div class="container">
+    <h2 id="title2">Songs </h2> 
     <table id="table" style="width:100%">
       <tr>
         <th> 
@@ -77,141 +78,40 @@
           </th>
       </tr>
     </table>
-   
+    <h2 id="title">Record </h2> 
 
 
     
        
     
   </div>
-  <button id=Play type="button" onclick="playall()" > ▶️ </button>
-  <button id=Pause type="button" onclick="pauseall()" > ⏹ </button>
-  
  
+
   <div class="box">
-  <p id="History"> Recording history </p>
+  <p id="History"> User actions </p>
   <select id="mySelectHistory" onchange="Play_History()"> 
     <option ></option>
   </select>
-  </div>
+ 
   
+
+  </div>
+  <button id=Play type="button" onclick="playall()" > ▶️ </button>
+  <button id=Pause type="button" onclick="pauseall()" > ⏹ </button>
+  <audio id="audio"></audio>
+  <audio id="audioPlay" controls></audio>
   <p>
     <button id=record ></button>
     <button id=stopRecord disabled >⏸ </button>
-  </p>
-
-  
-<!-- <script>
-
-var mediaRecorder; 
-let chunks = [];   
-record.onclick = e => {
-          console.log('I was clicked')
-          record.disabled = true;
-          record.style.backgroundColor = "blue"
-          stopRecord.disabled=false;
-
-          var constraints = { audio: true, video: true};
-
-          navigator.mediaDevices.getUserMedia(constraints).then(function(mediaStream) {
-              mediaRecorder = new MediaRecorder(mediaStream);
-              mediaRecorder.start();
-              console.log(mediaRecorder.state);
-              console.log("recorder started");
-              
-              mediaRecorder.ondataavailable = function(e) {
-                chunks.push(e.data);
-              }
-            })
-            .catch(function(err) { console.log('The following getUserMedia error occurred: ' + err); }); 
- }
-
-stopRecord.onclick = e => {  
-          console.log("Stop")
-           record.style.backgroundColor = "red"
-           mediaRecorder.stop();
-           console.log(mediaRecorder.state);
-           if (mediaRecorder.state == 'inactive') {
-          // convert stream data chunks to a 'webm' audio format as a blob
-           const blob = new Blob(chunks);
-          // const url = URL.createObjectURL(blob);
-    		  // console.log(url)
-          var url = window.URL.createObjectURL(blob);
-          console.log(url) 
-            //var audio = new Audio(url);
-            // audio.play();
-              
-         
-      }
-}
-
-
-</script>
-
-<script>
-  var song1 = new Audio('./songs/120_future_funk_beats_25.mp3');
-  var song2 = new Audio('./songs/120_stutter_breakbeats_16.mp3');
-  var song3 = new Audio('./songs/Bass Warwick heavy funk groove on E 120 BPM.mp3');
-  var song4 = new Audio('./songs/electric guitar coutry slide 120bpm - B.mp3');
-  var song5 = new Audio('./songs/FUD_120_StompySlosh.mp3');
-  var song6 = new Audio('./songs/GrooveB_120bpm_Tanggu.mp3');
-  var song7 = new Audio('./songs/MazePolitics_120_Perc.mp3');
-  var song8 = new Audio('./songs/PAS3GROOVE1.03B.mp3');
-  var song9 = new Audio('./songs/SilentStar_120_Em_OrganSynth.mp3');
-
-  var audioArray = [ song1, song2, song3, song4, song5, song6, song7, song8,song9];
-  var IndexArray = [ 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0];
-  
-
-function changeState(index,state){
-  IndexArray[index]=state;
-  if(state==0){
-    audioArray[index].pause();
-  }
-  for(let i=0;i<9;i++){  //*************************for me*******************
-       console.log(IndexArray[i])
-  }
-}
-function playall(){
-    for(let i=0;i<audioArray.length;i++){
-      if(IndexArray[i]==1){
-          audioArray[i].play();
-          audioArray[i].loop=true;
-      }
-    }
-  save_history();
-
-}
-function pauseall(){
-  for(let i=0;i<audioArray.length;i++){
-      if(audioArray[i].play){
-          audioArray[i].pause();
-      }
-    }
-}
-  // var audio;
-  // function playSound(song_url){
-  //   audio = new Audio(song_url);
-  //   audio.play();
-  // }
-  // function StopSound(){
-  //   audio.pause();
-  // }
-function save_history(){
-    alert("save")
     
-    // fs.writeFile (Date.now()+".json", JSON.stringify(IndexArray), function(err) {
-    // if (err) throw err;
-    // console.log('complete');
-    // });
-}
-</script> -->
+    
+  </p>
+  
+
+
 <script src="./scripts/script.js" ></script>  
-<audio id="audio"></audio>
-
-
-<audio id="adioPlay" controls></audio>
+<!-- <audio id="audio"></audio>
+<audio id="adioPlay" controls></audio> -->
 
 
 </body>
-
