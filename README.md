@@ -1,6 +1,6 @@
 # SongsProject
 
-In this project I present a loop mashine of several songs. <br/>
+In this project I present a loop machine of several songs. <br/>
 Each song has 2 buttons: on and off. <br/>
 <br/>
 ![image](https://user-images.githubusercontent.com/57682267/132966938-28a84453-1f04-4cbc-afc6-340fe94ebea4.png)
