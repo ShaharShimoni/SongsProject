@@ -13,7 +13,7 @@ I control the beginning and end of the loop by the following buttons: <br/>
 The selected songs are played in loops until the stop button is pressed.
  
 Each loop is saved, <br/>
-The user can play his previous selections  <br/>
+and the user can play his previous selections:  <br/>
 <br/>
 ![image](https://user-images.githubusercontent.com/57682267/132966972-88123951-4bcc-4031-9fc3-a0b5be6110dd.png) <br/>
 
@@ -21,7 +21,10 @@ Recording can be done by clicking the following button:  <br/>
 <br/>
 ![image](https://user-images.githubusercontent.com/57682267/132966961-d62c0747-48c0-4a01-97e7-4abd4e7a94aa.png) <br/>
 <br/>
-You can listen to the recording and save it.
+You can listen to the recording and save it.<br/>
+<br/>
+![image](https://user-images.githubusercontent.com/57682267/132967193-fc9d5abb-7f23-4622-b14c-f82f3102ce4c.png) <br/>
+
 
 
 ### functions:  <br/>
@@ -37,8 +40,8 @@ At the end of this function the "save_history" function is called. <br/>
 There is an array of arrays in which each place in the array has a different action of the user. <br/>
 "Save_history" function adds to the array a new array, in which it is marked the songs selected by the user. <br/>
 
-"Play_History" function according to user selection <br/>
-Plays the selected songs from the array in the selected location. <br/>
+"Play_History" function according to user selection, <br/>
+Plays the songs from the array (in the selected location). <br/>
 
 [Url](https://songsproject.herokuapp.com/#) <br/>
 <br/>
